@@ -5,15 +5,15 @@ const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
     newTuit.likes = 0;
-    // newTuit.username = "ReactJS";
-    // newTuit.liked = false;
-    // newTuit.disliked = false;
-    // newTuit.retuits = 111;
-    // newTuit.dislikes = 10;
-    // newTuit.comments = 55;
-    // newTuit.logo_image = "./images/spacex.jpg";
-    // newTuit.time = "2h";
-    // newTuit.handle = "ReactJS"
+    newTuit.username = "ReactJS";
+    newTuit.liked = false;
+    newTuit.disliked = false;
+    newTuit.retuits = 111;
+    newTuit.dislikes = 10;
+    newTuit.comments = 55;
+    newTuit.logo_image = "./images/spacex.jpg";
+    newTuit.time = "2h";
+    newTuit.handle = "ReactJS"
     tuits.push(newTuit);
     res.json(newTuit);
 }
