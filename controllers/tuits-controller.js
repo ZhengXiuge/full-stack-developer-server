@@ -11,7 +11,7 @@ const createTuit = (req, res) => {
     newTuit.disliked = false;
     newTuit.stats = {
         retuits: 111,
-        likes: 0,
+        likes: 15,
         dislikes: 10,
         comments: 55
     };
