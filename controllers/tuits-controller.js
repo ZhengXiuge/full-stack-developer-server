@@ -4,13 +4,17 @@ let tuits = posts;
 const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
-    newTuit.likes = 0;
-    newTuit.username = "ReactJS";
+    newTuit.postedBy = {
+        username: "ReactJS"
+    }
     newTuit.liked = false;
     newTuit.disliked = false;
-    newTuit.retuits = 111;
-    newTuit.dislikes = 10;
-    newTuit.comments = 55;
+    newTuit.stats = {
+        retuits: 111,
+        likes: 0,
+        dislikes: 10,
+        comments: 55
+    };
     newTuit.logo_image = "./images/spacex.jpg";
     newTuit.time = "2h";
     newTuit.handle = "ReactJS"
