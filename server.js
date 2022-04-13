@@ -3,10 +3,11 @@ The following server.js implements an HTTP server that responds Hello World! whe
  */
 // const express = require('express'); // The require function is equivalent to the import keyword and loads a library into the local source.
 import express from 'express';
+import mongoose from "mongoose";
 import cors from 'cors';
 import helloController from "./controllers/hello-controller.js";
 import userController from "./controllers/user-controller.js";
-import tuitsController from "./controllers/tuits-controller.js";
+import tuitsController from "./controllers/tuits-controller.js";    // load the mongoose library
 const app = express(); //  The express() function call creates an instance of the express library and assigns it to local variable app.
 
 /*
@@ -43,3 +44,15 @@ Node using process.env.PORT. Refactor server.js so that it uses the PORT environ
  */
 app.listen(process.env.PORT || 4000);
 // app.listen(4000);
+
+/*
+To connect to the database server programmatically, import the Mongoose library and then use the
+connect function as shown below.
+ */
+
+// mongoose.connect('mongodb://localhost:27017/webdev');       // connect to the webdev database
+mongoose.connect('mongodb+srv://zhenghelen:supersecretpassword@cluster0.4wczs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+//                           || 'mongodb://localhost:27017/webdev'
+// mongoose.connect(CONNECTION_STRING);
