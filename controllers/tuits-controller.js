@@ -9,7 +9,7 @@ Remove all usage of the array from the tuits-controller and instead import the t
 provide the functionality of interacting with the tuits collection. Add async to all the functions in
 tuits-controller since we'll be calling the functions in tuits-dao asynchronously.
  */
-import tuitsDao from "tuits-dao.js"
+import * as tuitsDao from "../tuits-dao.js"
 
 const createTuit = async (req, res) => {
     const newTuit = req.body;

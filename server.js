@@ -51,8 +51,8 @@ connect function as shown below.
  */
 
 // mongoose.connect('mongodb://localhost:27017/webdev');       // connect to the webdev database
-mongoose.connect('mongodb+srv://zhenghelen:supersecretpassword@cluster0.4wczs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+// mongoose.connect('mongodb+srv://zhenghelen:supersecretpassword@cluster0.4wczs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
-// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
-//                           || 'mongodb://localhost:27017/webdev'
-// mongoose.connect(CONNECTION_STRING);
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+                          || 'mongodb://localhost:27017/webdev'
+mongoose.connect(CONNECTION_STRING);

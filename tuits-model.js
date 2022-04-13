@@ -5,7 +5,7 @@ model from the tuit schema as shown below. The functions provided by Mongoose mo
 generic because they can interact with any collection configured in the schema.
  */
 import mongoose from 'mongoose';            // load mongoose library
-import tuitsSchema from 'tuits-schema.js' // load tuits schema
+import tuitsSchema from './tuits-schema.js' // load tuits schema
 const tuitsModel = mongoose                 // create mongoose model from the schema
     .model('TuitModel', tuitsSchema);
 export default tuitsModel;                  // export so it can be used elsewhere
